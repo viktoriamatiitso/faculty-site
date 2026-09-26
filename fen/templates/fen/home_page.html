@@ -1,0 +1,14 @@
+{% extends "fen/base.html" %}
+
+{% block title %} Факультет економічних наук {% endblock %}
+
+{% block content %}
+<h1 class="main_tittle">{{content.title}}</h1>
+<p class="home_descr">{{content.description}}</p>
+<div class="contacts">
+    <p><strong>Контакти:</strong></p>
+    <p>{{content.address}}</p>
+    <p>{{content.phone}}</p>
+    <p>{{content.email}}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %} Факультет економічних наук {% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'where/style.css' %}">
+    </head>
+    <body>
+        <header class="site-header">
+            <a href="{% url 'fen:home_page' %}">Головна</a>
+            <nav>
+                <a href="{% url 'fen:departments_list' %}">Кафедри</a>
+                <a href="{% url 'fen:specialities_list' %}">Спеціальності</a>
+            </nav>
+        </header>
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+        <footer>
+            <p class="footer">© 2026 Created by Viktoria Matiitso</p>
+        </footer>
+    </body>
+</html>
