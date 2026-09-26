@@ -21,3 +21,10 @@ def department_detail(request,id):
     except Department.DoesNotExist:
         return redirect("fen:departments_list")
     return render(request, "fen/department_detail.html", {"department": department})
+
+def speciality_detail(request,id):
+    try:
+        speciality = Speciality.objects.get(id=id)
+    except Speciality.DoesNotExist:
+        return redirect("fen:specialities_list")
+    return render(request, "fen/speciality_detail.html", {"speciality": speciality})

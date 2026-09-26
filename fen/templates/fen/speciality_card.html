@@ -1,6 +1,8 @@
 {% load static %}
 <div class="speciality_card">
-     <h3>{{ speciality.code }} {{ speciality.name }}</h3>
+    <a href="{% url 'fen:speciality_detail' speciality.id %}">
+       <h3>{{ speciality.code }} {{ speciality.name }}</h3> 
+    </a>
     <p>{{speciality.description|truncatewords:50 }}</p>
     <p><strong>Координатор набору: </strong> {{ speciality.coordinator_name }}</p>
     <p><strong>Контакти: </strong>{{speciality.coordinator_contact }}</p>
