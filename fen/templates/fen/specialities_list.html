@@ -1,0 +1,12 @@
+{% extends "fen/base.html" %}
+
+{% block title %} Факультет економічних наук {% endblock %}
+
+{% block content %}
+<h2>Спеціальності факультету економічних наук: </h2>
+<div class="speciality_grid">
+{% for speciality in specialities %}
+    {% include "fen/speciality_card.html" with speciality=speciality %}
+{% endfor %}
+</div>
+{% endblock %}
