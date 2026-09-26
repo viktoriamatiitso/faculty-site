@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HomePage
+from .models import HomePage, Department
 
 # Create your views here.
 
@@ -8,7 +8,8 @@ def home_page(request):
     return render(request, "fen/home_page.html", {"content": content})
 
 def departments_list(request):
-    return render(request, "fen/departments_list.html")
+    departments = Department.objects.all()
+    return render(request, "fen/departments_list.html", {"departments": departments})
 
 def specialities_list(request):
     return render(request, "fen/specialities_list.html")
