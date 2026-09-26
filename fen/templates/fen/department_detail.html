@@ -1,0 +1,32 @@
+{% extends "fen/base.html" %}
+{% load static %}
+{% block title %} Факультет економічних наук {% endblock %}
+{% block content %}
+<div class="department_detail">
+     <h3>{{ department.name }}</h3>
+    <p>
+        <strong>Завідувач кафедри: </strong>
+        {{ department.head_of_department }}
+    </p>
+    <div class="specialities_detail">
+        <strong>Спеціальності: </strong>
+        {% if department.specialities.all %}
+            {% for speciality in department.specialities.all %}
+                <li>{{speciality.name}}</li>
+            {% endfor %}
+        {% else %}
+            <p>Немає спеціальностей</p>
+        {% endif %}
+   </div>
+   <div class="lecturers">
+        <strong>Викладачі: </strong>
+        {% if department.lecturers.all %}
+            {% for lecturer in department.lecturers.all %}
+                <li>{{lecturer.name}} - {{lecturer.position}}, {{lecturer.degree}}</li>
+            {% endfor %}
+        {% else %}
+            <p>Немає викладачів</p>
+        {% endif %}
+   </div>
+</div>
+{% endblock %}

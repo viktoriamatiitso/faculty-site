@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import HomePage, Department, Speciality
 
 # Create your views here.
@@ -14,3 +14,10 @@ def departments_list(request):
 def specialities_list(request):
     specialities = Speciality.objects.all()
     return render(request, "fen/specialities_list.html", {"specialities": specialities})
+
+def department_detail(request,id):
+    try:
+        department = Department.objects.get(id=id)
+    except Department.DoesNotExist:
+        return redirect("fen:departments_list")
+    return render(request, "fen/department_detail.html", {"department": department})

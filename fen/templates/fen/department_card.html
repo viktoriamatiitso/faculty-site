@@ -1,6 +1,8 @@
 {% load static %}
 <div class="department_card">
-     <h3>{{ department.name }}</h3>
+     <a href="{% url 'fen:department_detail' department.id %}" class="department_link">
+        <h3>{{ department.name }}</h3>
+     </a>
     <p>
         <strong>Завідувач кафедри: </strong>
         {{ department.head_of_department }}
