@@ -1,9 +1,9 @@
 {% extends "faculty/base.html" %}
 
-{% block title %} Факультет економічних наук {% endblock %}
+{% block title %} ФСНСТ {% endblock %}
 
 {% block content %}
-<h2>Спеціальності факультету економічних наук: </h2>
+<h2>Спеціальності факультету соціальних наук та соціальних технологій: </h2>
 <div class="speciality_grid">
 {% for speciality in specialities %}
     {% include "faculty/speciality_card.html" with speciality=speciality %}
