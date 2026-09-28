@@ -1,6 +1,6 @@
 {% load static %}
 <div class="speciality_card">
-    <a href="{% url 'fen:speciality_detail' speciality.id %}">
+    <a href="{% url 'faculty:speciality_detail' speciality.id %}">
        <h3>{{ speciality.code }} {{ speciality.name }}</h3> 
     </a>
     <p>{{speciality.description|truncatewords:50 }}</p>

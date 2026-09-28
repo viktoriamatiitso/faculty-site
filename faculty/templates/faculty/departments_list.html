@@ -1,4 +1,4 @@
-{% extends "fen/base.html" %}
+{% extends "faculty/base.html" %}
 
 {% block title %} Факультет економічних наук {% endblock %}
 
@@ -6,7 +6,7 @@
 <h2>Кафедри факультету економічних наук: </h2>
 <div class="department_grid">
 {% for department in departments %}
-    {% include "fen/department_card.html" with department=department %}
+    {% include "faculty/department_card.html" with department=department %}
 {% endfor %}
 </div>
 {% endblock %}
