@@ -19,7 +19,15 @@
             {% block content %} {% endblock %}
         </main>
         <footer>
-            <p class="footer">© 2026 Created by Viktoria Matiitso</p>
+            <div class="footer-container">
+                <div class="footer-contacts">
+                    <p><strong>Контакти:</strong></p>
+                    <p>{{content.address}}</p>
+                    <p>{{content.phone}}</p>
+                    <p>{{content.email}}</p>
+                </div>
+                <p class="footer">© 2026 Created by Viktoria Matiitso</p>
+            </div>
         </footer>
     </body>
 </html>

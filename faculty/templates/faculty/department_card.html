@@ -11,7 +11,7 @@
         <strong>Спеціальності: </strong>
         {% if department.specialities.all %}
             {% for speciality in department.specialities.all %}
-                <li>{{speciality.name}}</li>
+                <li>{{speciality.name}} ({{speciality.degree}})</li>
             {% endfor %}
         {% else %}
             <p>Немає спеціальностей</p>

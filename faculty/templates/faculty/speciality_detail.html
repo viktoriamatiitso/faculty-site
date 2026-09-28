@@ -6,11 +6,12 @@
 {% block content %}
 <div class="speciality_detail">
     <h3>{{ speciality.code }} {{ speciality.name }}</h3>
-    <p>{{ speciality.description }}</p>
+    <p><strong>Освітня програма: </strong>{{speciality.curriculum}}</p>
+    <p class="speciality-descr">{{ speciality.description }}</p>
     <p><strong>Координатор набору: </strong> {{ speciality.coordinator_name }}</p>
     <p><strong>Контакти: </strong>{{speciality.coordinator_contact }}</p>
     <div class="subjects">
-        <p>Дисципліни, що вивчаються: </p>
+        <p><strong>Дисципліни, що вивчаються:</strong> </p>
         {% if speciality.subjects_list %}
             {{ speciality.subjects_list|linebreaks }}
         {% else %}
