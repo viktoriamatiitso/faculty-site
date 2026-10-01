@@ -42,3 +42,13 @@ class HomePage(models.Model):
 
     def __str__(self):
         return self.title
+    
+class ExchangeProgram(models.Model):
+    university = models.CharField(max_length=100)
+    languages = models.CharField(max_length=100)
+    number_of_seats = models.CharField(max_length=100)
+    deadline = models.DateField()
+    description = models.TextField()
+
+    def __str__(self):
+        return self.university
