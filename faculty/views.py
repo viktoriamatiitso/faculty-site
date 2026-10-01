@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import HomePage, Department, Speciality
+from .models import HomePage, Department, Speciality, ExchangeProgram
 
 # Create your views here.
 
@@ -32,3 +32,16 @@ def speciality_detail(request,id):
     except Speciality.DoesNotExist:
         return redirect("faculty:specialities_list")
     return render(request, "faculty/speciality_detail.html", {"speciality": speciality, "content": content})
+
+def exchanges_list(request):
+    content = HomePage.objects.first()
+    exchanges = ExchangeProgram.objects.all()
+    return render(request, "faculty/exchanges_list.html", {"exchanges": exchanges, "content": content})
+
+def exchange_detail(request, id):
+    content = HomePage.objects.first()
+    try:
+        exchange = ExchangeProgram.objects.get(id=id)
+    except ExchangeProgram.DoesNotExist:
+        return redirect("faculty:exchanges_list")
+    return render(request, "faculty/exchange_detail.html", {"exchange":exchange, "content": content})

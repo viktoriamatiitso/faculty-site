@@ -98,14 +98,16 @@ h2 {
 }
 
 .speciality_grid,
-.department_grid {
+.department_grid,
+.exchanges_grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .speciality_card,
-.department_card {
+.department_card,
+.exchange_card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -113,22 +115,26 @@ h2 {
 }
 
 .speciality_card:hover,
-.department_card:hover {
+.department_card:hover,
+.exchange_card:hover {
     border-color: var(--yellow);
 }
 
 .speciality_card h3,
-.department_card h3 {
+.department_card h3,
+.exchange_card h3 {
     margin-top: 0;
 }
 
 .speciality_card p,
-.department_card p {
+.department_card p,
+.exchange_card p {
     color: var(--muted);
 }
 
 .speciality_card strong,
-.department_card strong {
+.department_card strong,
+.exchange_card strong{
     color: var(--text);
 }
 
@@ -146,7 +152,8 @@ li::before {
 }
 
 .speciality_detail,
-.department_detail {
+.department_detail,
+.exchange_detail {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
