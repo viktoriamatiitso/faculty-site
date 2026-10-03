@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -43,6 +44,10 @@ class HomePage(models.Model):
     def __str__(self):
         return self.title
     
+class ExchangeProgramQuerySet(models.QuerySet):
+    def active_deadline(self):
+        return self.filter(deadline__gte=timezone.now().date())
+    
 class ExchangeProgram(models.Model):
     # university = models.CharField(max_length=100)
     university_name = models.CharField(max_length=100, default="")
@@ -52,6 +57,7 @@ class ExchangeProgram(models.Model):
     number = models.IntegerField(default=0)
     deadline = models.DateField()
     description = models.TextField()
+    objects = ExchangeProgramQuerySet.as_manager()
 
     def __str__(self):
         return self.university_name
@@ -59,3 +65,9 @@ class ExchangeProgram(models.Model):
     @property
     def uni(self):
         return f"{self.university_name} {self.country}".strip()
+    
+    @property
+    def is_active(self):
+        if self.deadline is None:
+            return False
+        return self.deadline >= timezone.now().date()

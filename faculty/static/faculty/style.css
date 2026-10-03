@@ -138,6 +138,16 @@ h2 {
     color: var(--text);
 }
 
+.active{
+    color: #2ea043; 
+    font-weight: bold;
+}
+
+.not-active {
+    color: #f85149; 
+    font-weight: bold;
+}
+
 li {
     list-style: none;
     padding: 3px 0 3px 16px;

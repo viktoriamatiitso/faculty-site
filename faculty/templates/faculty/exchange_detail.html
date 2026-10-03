@@ -17,11 +17,16 @@
     </p>
     <p>
         <strong>Кількість місць: </strong>
-        {{ exchange.number_of_seats }}
+        {{ exchange.number }}
     </p>
      <p>
         <strong>Дедлайн подачі: </strong>
         {{ exchange.deadline|date:"d.m.Y" }}
     </p>
+    {% if exchange.is_active %}
+        <span class="active">Прийом триває</span>
+    {% else %}
+        <span class="not-active">Прийом завершено</span>
+    {% endif %}
 </div>
 {% endblock %}
