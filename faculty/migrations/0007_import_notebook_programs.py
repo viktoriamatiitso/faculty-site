@@ -20,6 +20,18 @@ VALUES
     сучасну інфраструктуру, комфортне студентське середовище та високу якість викладання.');
 """
 
+REVERS_SQL = """
+DELETE FROM fen_exchangeprogram
+WHERE university IN (
+    'Uniwersytet Warszawski, Польща',
+    'KU Leuven (Бельгія)',
+    'Vilnius University, Литва',
+    'Uniwersytet Jagielloński, Польща',
+    'University of Tartu - Естонія',
+    'Masaryk University, Чехія'
+)
+"""
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -27,5 +39,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunSQL(PROGRAMS_SQL),
+        migrations.RunSQL(PROGRAMS_SQL, reverse_sql=REVERS_SQL),
     ]

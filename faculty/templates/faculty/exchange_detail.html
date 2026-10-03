@@ -5,8 +5,12 @@
 
 {% block content %}
 <div class="exchange_detail">
-    <h3>{{ exchange.university }}</h3>
+    <h3>{{ exchange.university_name }}</h3>
     <p>{{ exchange.description }}</p>
+    <p>
+        <strong>Країна: </strong>
+        {{exchange.country}}
+    </p>
     <p>
         <strong>Мови навчання: </strong>
         {{ exchange.languages }}

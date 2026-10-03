@@ -44,7 +44,9 @@ class HomePage(models.Model):
         return self.title
     
 class ExchangeProgram(models.Model):
-    university = models.CharField(max_length=100)
+    # university = models.CharField(max_length=100)
+    university_name = models.CharField(max_length=100, default="")
+    country = models.CharField(max_length=100, default="")
     languages = models.CharField(max_length=100)
     number_of_seats = models.CharField(max_length=100)
     deadline = models.DateField()
@@ -52,3 +54,7 @@ class ExchangeProgram(models.Model):
 
     def __str__(self):
         return self.university
+    
+    @property
+    def uni(self):
+        return f"{self.university_name} {self.country}".strip()
