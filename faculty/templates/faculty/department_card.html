@@ -1,20 +1,21 @@
 {% load static %}
 <div class="department_card">
-     <a href="{% url 'faculty:department_detail' department.id %}" class="department_link">
-        <h3>{{ department.name }}</h3>
-     </a>
-    <p>
-        <strong>Завідувач кафедри: </strong>
-        {{ department.head_of_department }}
-    </p>
-    <div class="specialities">
-        <strong>Спеціальності: </strong>
-        {% if department.specialities.all %}
-            {% for speciality in department.specialities.all %}
-                <li>{{speciality.name}} ({{speciality.degree}})</li>
-            {% endfor %}
-        {% else %}
-            <p>Немає спеціальностей</p>
-        {% endif %}
-   </div>
+  <a href="{% url 'faculty:department_detail' department.id %}"
+     class="department_link">
+    <h3>{{ department.name }}</h3>
+  </a>
+  <p>
+    <strong>Завідувач кафедри:</strong>
+    {{ department.head_of_department }}
+  </p>
+  <div class="specialities">
+    <strong>Спеціальності:</strong>
+    {% if department.specialities.all %}
+      {% for speciality in department.specialities.all %}
+        <li>{{ speciality.name }} ({{ speciality.degree }})</li>
+      {% endfor %}
+    {% else %}
+      <p>Немає спеціальностей</p>
+    {% endif %}
+  </div>
 </div>

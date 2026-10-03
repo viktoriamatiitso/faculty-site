@@ -1,12 +1,10 @@
 {% extends "faculty/base.html" %}
-
-{% block title %} ФСНСТ {% endblock %}
-
+{% block title %}ФСНСТ{% endblock %}
 {% block content %}
-<h2>Кафедри факультету соціальних наук та соціальних технологій: </h2>
-<div class="department_grid">
-{% for department in departments %}
-    {% include "faculty/department_card.html" with department=department %}
-{% endfor %}
-</div>
+  <h2>Кафедри факультету соціальних наук та соціальних технологій:</h2>
+  <div class="department_grid">
+    {% for department in departments %}
+      {% include "faculty/department_card.html" with department=department %}
+    {% endfor %}
+  </div>
 {% endblock %}

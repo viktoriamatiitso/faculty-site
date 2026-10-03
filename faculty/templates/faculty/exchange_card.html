@@ -1,28 +1,29 @@
 {% load static %}
 <div class="exchange_card">
-     <a href="{% url 'faculty:exchange_detail' exchange.id %}" class="exchange_link">
-        <h3>{{ exchange.university_name }}</h3>
-     </a>
-    <p>{{ exchange.description|truncatewords:5 }}</p>
-    <p>
-        <strong>Країна: </strong>
-        {{exchange.country}}
-    </p>
-    <p>
-        <strong>Мови навчання: </strong>
-        {{ exchange.languages }}
-    </p>
-    <p>
-        <strong>Кількість місць: </strong>
-        {{ exchange.number }}
-    </p>
-     <p>
-        <strong>Дедлайн подачі: </strong>
-        {{ exchange.deadline|date:"d.m.Y" }}
-    </p>
-    {% if exchange.is_active %}
-        <span class="active">Прийом триває</span>
-    {% else %}
-        <span class="not-active">Прийом завершено</span>
-    {% endif %}
+  <a href="{% url 'faculty:exchange_detail' exchange.id %}"
+     class="exchange_link">
+    <h3>{{ exchange.university_name }}</h3>
+  </a>
+  <p>{{ exchange.description|truncatewords:5 }}</p>
+  <p>
+    <strong>Країна:</strong>
+    {{ exchange.country }}
+  </p>
+  <p>
+    <strong>Мови навчання:</strong>
+    {{ exchange.languages }}
+  </p>
+  <p>
+    <strong>Кількість місць:</strong>
+    {{ exchange.number }}
+  </p>
+  <p>
+    <strong>Дедлайн подачі:</strong>
+    {{ exchange.deadline|date:"d.m.Y" }}
+  </p>
+  {% if exchange.is_active %}
+    <span class="active">Прийом триває</span>
+  {% else %}
+    <span class="not-active">Прийом завершено</span>
+  {% endif %}
 </div>

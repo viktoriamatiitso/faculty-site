@@ -1,243 +1,245 @@
 :root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --border: #2a313a;
-    --text: #e6e6e6;
-    --muted: #9aa4af;
-    --yellow: #f5b311;
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #2a313a;
+  --text: #e6e6e6;
+  --muted: #9aa4af;
+  --yellow: #f5b311;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.4;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    color: var(--yellow);
-    text-decoration: none;
+  color: var(--yellow);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    background: var(--card);
-    border-bottom: 2px solid var(--yellow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: var(--card);
+  border-bottom: 2px solid var(--yellow);
 }
 
 .site-header a {
-    font-weight: bold;
-    font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .site-header nav {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 main {
-    flex: 1;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px 20px;
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-h1, h2, h3 {
-    color: var(--yellow);
+h1,
+h2,
+h3 {
+  color: var(--yellow);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .main_tittle {
-    text-align: center;
-    font-size: 34px;
+  text-align: center;
+  font-size: 34px;
 }
 
 .home_descr {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 20px;
 }
 
 .contacts {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--yellow);
-    border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--yellow);
+  border-radius: 8px;
 }
 
 .contacts p {
-    margin: 6px 0;
+  margin: 6px 0;
 }
 
-.degree-name{
-    color:white;
-    text-align: center;
-    font-size: 24px;
+.degree-name {
+  color: white;
+  text-align: center;
+  font-size: 24px;
 }
 
 .speciality_grid,
 .department_grid,
 .exchanges_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .speciality_card,
 .department_card,
 .exchange_card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .speciality_card:hover,
 .department_card:hover,
 .exchange_card:hover {
-    border-color: var(--yellow);
+  border-color: var(--yellow);
 }
 
 .speciality_card h3,
 .department_card h3,
 .exchange_card h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .speciality_card p,
 .department_card p,
 .exchange_card p {
-    color: var(--muted);
+  color: var(--muted);
 }
 
 .speciality_card strong,
 .department_card strong,
-.exchange_card strong{
-    color: var(--text);
+.exchange_card strong {
+  color: var(--text);
 }
 
-.active{
-    color: #2ea043; 
-    font-weight: bold;
+.active {
+  color: #2ea043;
+  font-weight: bold;
 }
 
 .not-active {
-    color: #f85149; 
-    font-weight: bold;
+  color: #f85149;
+  font-weight: bold;
 }
 
 li {
-    list-style: none;
-    padding: 3px 0 3px 16px;
-    position: relative;
+  list-style: none;
+  padding: 3px 0 3px 16px;
+  position: relative;
 }
 
 li::before {
-    content: "•";
-    color: var(--yellow);
-    position: absolute;
-    left: 0;
+  content: "•";
+  color: var(--yellow);
+  position: absolute;
+  left: 0;
 }
 
 .speciality_detail,
 .department_detail,
 .exchange_detail {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px;
 }
 
 .subjects,
 .specialities_detail,
 .lecturers {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .speciality-descr {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--text);
-    margin: 20px 0;
-    text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 20px 0;
+  text-align: justify;
 }
 
 .subjects {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
 .subjects strong {
-    font-size: 18px;
-    color: var(--yellow);
-    display: block;
-    margin-bottom: 12px;
+  font-size: 18px;
+  color: var(--yellow);
+  display: block;
+  margin-bottom: 12px;
 }
 
 .lecturers {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
 footer {
-    background: var(--card);
-    border-top: 2px solid var(--border);
-    padding: 30px 20px;
-    color: var(--muted);
+  background: var(--card);
+  border-top: 2px solid var(--border);
+  padding: 30px 20px;
+  color: var(--muted);
 }
 
 .footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
 
 .footer-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
 }
 
 .footer-contacts p {
-    margin: 0;
+  margin: 0;
 }
 
 .footer-contacts strong {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 .footer {
-    margin: 0;
-    font-size: 13px;
-    color: var(--muted);
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
 }

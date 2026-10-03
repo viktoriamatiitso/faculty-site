@@ -1,22 +1,20 @@
 {% extends "faculty/base.html" %}
 {% load static %}
-
-{% block title %} ФСНСТ {% endblock %}
-
+{% block title %}ФСНСТ{% endblock %}
 {% block content %}
-<div class="speciality_detail">
+  <div class="speciality_detail">
     <h3>{{ speciality.code }} {{ speciality.name }}</h3>
-    <p><strong>Освітня програма: </strong>{{speciality.curriculum}}</p>
+    <p><strong>Освітня програма: </strong>{{ speciality.curriculum }}</p>
     <p class="speciality-descr">{{ speciality.description }}</p>
-    <p><strong>Координатор набору: </strong> {{ speciality.coordinator_name }}</p>
-    <p><strong>Контакти: </strong>{{speciality.coordinator_contact }}</p>
+    <p><strong>Координатор набору:</strong> {{ speciality.coordinator_name }}</p>
+    <p><strong>Контакти: </strong>{{ speciality.coordinator_contact }}</p>
     <div class="subjects">
-        <p><strong>Дисципліни, що вивчаються:</strong> </p>
-        {% if speciality.subjects_list %}
-            {{ speciality.subjects_list|linebreaks }}
-        {% else %}
-            <p>Немає дисциплін</p>
-        {% endif %}
+      <p><strong>Дисципліни, що вивчаються:</strong> </p>
+      {% if speciality.subjects_list %}
+        {{ speciality.subjects_list|linebreaks }}
+      {% else %}
+        <p>Немає дисциплін</p>
+      {% endif %}
     </div>
-</div>
+  </div>
 {% endblock %}

@@ -1,32 +1,30 @@
 {% extends "faculty/base.html" %}
 {% load static %}
-
-{% block title %} ФСНСТ {% endblock %}
-
+{% block title %}ФСНСТ{% endblock %}
 {% block content %}
-<div class="exchange_detail">
+  <div class="exchange_detail">
     <h3>{{ exchange.university_name }}</h3>
     <p>{{ exchange.description }}</p>
     <p>
-        <strong>Країна: </strong>
-        {{exchange.country}}
+      <strong>Країна:</strong>
+      {{ exchange.country }}
     </p>
     <p>
-        <strong>Мови навчання: </strong>
-        {{ exchange.languages }}
+      <strong>Мови навчання:</strong>
+      {{ exchange.languages }}
     </p>
     <p>
-        <strong>Кількість місць: </strong>
-        {{ exchange.number }}
+      <strong>Кількість місць:</strong>
+      {{ exchange.number }}
     </p>
-     <p>
-        <strong>Дедлайн подачі: </strong>
-        {{ exchange.deadline|date:"d.m.Y" }}
+    <p>
+      <strong>Дедлайн подачі:</strong>
+      {{ exchange.deadline|date:"d.m.Y" }}
     </p>
     {% if exchange.is_active %}
-        <span class="active">Прийом триває</span>
+      <span class="active">Прийом триває</span>
     {% else %}
-        <span class="not-active">Прийом завершено</span>
+      <span class="not-active">Прийом завершено</span>
     {% endif %}
-</div>
+  </div>
 {% endblock %}

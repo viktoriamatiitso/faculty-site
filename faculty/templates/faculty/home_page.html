@@ -1,8 +1,6 @@
 {% extends "faculty/base.html" %}
-
-{% block title %} ФСНСТ {% endblock %}
-
+{% block title %}ФСНСТ{% endblock %}
 {% block content %}
-<h1 class="main_tittle">{{content.title}}</h1>
-<div class="home_descr">{{content.description|linebreaks}}</div>
+  <h1 class="main_tittle">{{ content.title }}</h1>
+  <div class="home_descr">{{ content.description|linebreaks }}</div>
 {% endblock %}
