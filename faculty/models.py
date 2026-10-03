@@ -48,12 +48,13 @@ class ExchangeProgram(models.Model):
     university_name = models.CharField(max_length=100, default="")
     country = models.CharField(max_length=100, default="")
     languages = models.CharField(max_length=100)
-    number_of_seats = models.CharField(max_length=100)
+    # number_of_seats = models.CharField(max_length=100)
+    number = models.IntegerField(default=0)
     deadline = models.DateField()
     description = models.TextField()
 
     def __str__(self):
-        return self.university
+        return self.university_name
     
     @property
     def uni(self):
