@@ -1,0 +1,29 @@
+{% extends "faculty/base.html" %}
+{% block title %}ФСНСТ{% endblock %}
+{% block content %}
+  <h2>Спеціальності факультету соціальних наук та соціальних технологій:</h2>
+  <h3 class="degree-name">Бакалавр</h3>
+  <div class="speciality_grid">
+    {% for speciality in specialities %}
+      {% if speciality.degree == "Бакалавр" %}
+        {% include "faculty/speciality_card.html" with speciality=speciality %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <h3 class="degree-name">Магістр</h3>
+  <div class="speciality_grid">
+    {% for speciality in specialities %}
+      {% if speciality.degree == "Магістр" %}
+        {% include "faculty/speciality_card.html" with speciality=speciality %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <h3 class="degree-name">Аспірантура</h3>
+  <div class="speciality_grid">
+    {% for speciality in specialities %}
+      {% if speciality.degree == "Аспірантура" %}
+        {% include "faculty/speciality_card.html" with speciality=speciality %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

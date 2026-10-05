@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} ФСНСТ {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'faculty/style.css' %}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="{% url 'faculty:home_page' %}">Головна</a>
+      <nav>
+        <a href="{% url 'faculty:departments_list' %}">Кафедри</a>
+        <a href="{% url 'faculty:specialities_list' %}">Спеціальності</a>
+        <a href="{% url 'faculty:exchanges_list' %}">Програми обміну</a>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-contacts">
+          <p><strong>Контакти:</strong></p>
+          <p>{{ content.address }}</p>
+          <p>{{ content.phone }}</p>
+          <p>{{ content.email }}</p>
+        </div>
+        <p class="footer">© 2026 Created by Viktoria Matiitso</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "faculty/base.html" %}
+{% block title %}ФСНСТ{% endblock %}
+{% block content %}
+  <h2>Програми академічного обміну:</h2>
+  <div class="exchanges_grid">
+    {% for exchange in exchanges %}
+      {% include "faculty/exchange_card.html" with exchange=exchange %}
+    {% endfor %}
+  </div>
+{% endblock %}
