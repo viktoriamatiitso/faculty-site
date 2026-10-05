@@ -10,21 +10,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RenameField(
+        migrations.RemoveField(
             model_name='homepage',
-            old_name='contacts',
-            new_name='address',
-        ),
-        migrations.AddField(
-            model_name='homepage',
-            name='email',
-            field=models.CharField(default='email', max_length=100),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='homepage',
-            name='phone',
-            field=models.CharField(default='email', max_length=100),
-            preserve_default=False,
+            name='contacts',
         ),
     ]

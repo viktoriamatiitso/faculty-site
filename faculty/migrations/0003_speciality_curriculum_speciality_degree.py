@@ -10,16 +10,4 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='speciality',
-            name='curriculum',
-            field=models.CharField(default='', max_length=100),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='speciality',
-            name='degree',
-            field=models.CharField(default='', max_length=100),
-            preserve_default=False,
-        ),
     ]
